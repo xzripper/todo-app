@@ -48,6 +48,10 @@
 			Month = `0${Month}`
 		}
 
+		if(Minutes <= 9) {
+			Minutes = `0${Minutes}`
+		}
+
 		let DateToday = `${Day}.${Month}.${Year} ${Hours}:${Minutes}.`
 
 		Todos = [...Todos]
@@ -70,6 +74,12 @@
 	// Clear all todo's.
 	function ClearTodos() {
 		if(window.confirm("Are you sure?")) {
+			if(Todos.length === 0) {
+				alert("No todo's found.")
+
+				return
+			}
+
 			Todos = [...Todos]
 			Todos = []
 		}
@@ -195,7 +205,7 @@
 <body>
 	<main>
 		<!-- Welcome message. -->
-		<h2>Simple TODO in Svelte!</h2>
+		<h2>Simple TODO.</h2>
 
 		<!-- Create new todo. -->
 		<h3>Create new TODO.</h3>
@@ -255,7 +265,7 @@
 				Simple TODO site!<br>
 				Site contains default function on TODO app.<br>
 				You can create, delete, mark as done, save notes, load notes, clear all saved notes, delete all notes.<br>
-				App have simple simple small, cosy UI.<br>
+				App have simple, small, cosy UI.<br>
 				Have good using!<br><br>
 				Programming technologies: HTML, CSS, JS, Svelte.<br>
 				Author: Ivan Perzhinsky.<br>
