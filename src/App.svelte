@@ -210,8 +210,8 @@
 		<!-- Create new todo. -->
 		<h3>Create new TODO.</h3>
 
-		<input bind:value={Title} id="UserTodoTitle" placeholder="TODO Title." size=50><br>
-		<textarea bind:value={Text} id="UserTodoText" placeholder="TODO Text." rows=10 cols=52></textarea><br>
+		<input bind:value={Title} placeholder="TODO Title." size=50><br>
+		<textarea bind:value={Text} placeholder="TODO Text." rows=10 cols=52></textarea><br>
 
 		<button class="WFont" on:click={NewTodo}>New TODO.</button><br>
 
