@@ -205,7 +205,7 @@
 <body>
 	<main>
 		<!-- Welcome message. -->
-		<h2>Simple TODO app.</h2>
+		<h2>Simple TODO Application.</h2>
 
 		<!-- Create new todo. -->
 		<h3>Create new TODO.</h3>
