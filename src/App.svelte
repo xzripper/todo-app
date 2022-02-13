@@ -184,6 +184,11 @@
 		font-weight: 600;
 	}
 
+	/* Span Underlined. */
+	span.underlined {
+		text-decoration: underline;
+	}
+
 	/* Global stylesheets for tags. */
 	:global(body) {
 		background-color: rgb(30, 30, 30);
@@ -198,6 +203,10 @@
 	}
 
 	:global(p) {
+		color: white;
+	}
+
+	:global(span) {
 		color: white;
 	}
 </style>
@@ -218,7 +227,7 @@
 		<!-- List of todo's. -->
 		<h3>Todo's.</h3>
 		<p class="WFont"><i>A list of todo's. ({Todos.length}).</i></p>
-		<div><p class="underlined" on:click={ClearTodos}><i>Delete all.</i></p></div>
+		<div><span class="underlined" on:click={ClearTodos}><i>Delete all.</i></span></div><br>
 
 		{#each Todos as Todo, TodoPosition}
 			<div transition:slide class="NoteDiv">
